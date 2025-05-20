@@ -1,0 +1,388 @@
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: white;
+    color: black;
+    padding-top: 60px;
+    font-family: Arial, sans-serif;
+}
+
+/* navbar - gradasi biru-ungu yang lebih menarik */
+.navbar{
+    background: linear-gradient(135deg, #4a00e0, #8e2de2), url('/api/placeholder/1600/600') center/cover no-repeat;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.4rem 7%;
+    border-bottom: 1px solid whitesmoke;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+}
+
+.navbar .navbar-logo{
+    font-size: 1.6rem;
+    color: white;
+    font-weight: bold;
+    font-style: oblique;
+    text-decoration: none;
+}
+
+.navbar .navbar-menu a{
+    color: #F0F8FF;
+    font-size: 1rem;
+    margin: 0 0.5rem;
+    text-decoration: none;
+    font-weight: 700;
+    display: inline-block;
+    padding: 5px;
+}
+
+.navbar .navbar-menu a:hover{
+    background-color: white;
+    color: #6a11cb;
+    border-radius: 5px;
+}
+
+.navbar .navbar-menu a::after{
+    content: '';
+    display: block;
+    border-radius: 0.1rem solid blue;
+    transform: scaleX(0);
+    transition: 0.2s linear;
+}
+
+.navbar .navbar-menu a:hover::after{
+    transition: scaleX(0.5);
+}
+
+.navbar .navbar-icon a{
+    color: white;
+    margin: 0 0.5rem;
+}
+
+#btn-menu{
+    display: none;
+}
+
+section{
+    scroll-margin-top: 80px;
+}
+
+#beranda{
+    scroll-margin-top: 100px;
+}
+
+.sec-beranda{
+    display: flex;
+    align-items: center;
+    padding: 0 7%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.image-wrapper{
+    position: relative;
+    width: 100%;
+    display: inline-block;
+    margin: 0 auto;
+    max-width: 1500px;
+}
+
+.image-wrapper img{
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 0.5rem;
+}
+
+.image-wrapper .content-beranda{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+    padding: 0;
+}
+
+.image-wrapper .content-beranda h1{
+    font-size: 3rem;
+    font-style: oblique;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+.image-wrapper .content-beranda p{
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+.image-wrapper .content-beranda .btn{
+    padding: 0.8rem 1.5rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    background-color: #8e2de2;
+    color: white;
+}
+
+.image-wrapper .content-beranda .btn:hover {
+    background-color: #4a00e0;
+}
+
+/* Product section - dengan gradasi biru-ungu */
+.sec-produk{
+    display: block;
+    align-items: center;
+    padding: 0 10%;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    background: linear-gradient(135deg, #6a11cb, #2575fc), url('/api/placeholder/1600/600') center/cover no-repeat;
+    color: white;
+}
+
+.sec-produk h1{
+    text-align: center;
+    font-weight: bold;
+    font-size: 35px;
+}
+
+.sec-produk p{
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.container-img-produk{
+    width: auto;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+    overflow: hidden;
+    background-color: white;
+}
+
+.container-img-produk img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.sec-produk .card{
+    box-shadow: 0 5px 25px rgb(1 1 1 / 20%);
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #e0e0e0;
+    background-color: white;
+}
+
+.sec-produk .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.sec-produk .col-md-3 {
+    display: flex;
+    flex: 0 0 23%;
+    flex-direction: column;
+    margin: 10px 0;
+    max-width: 23%;
+    box-sizing: border-box;
+}
+
+.sec-produk .card-body{
+    text-align: center;
+    padding: 15px;
+}
+
+.sec-produk .card-body h5,
+.sec-produk .card-body p{
+    color: black;
+    margin-bottom: 10px;
+}
+
+/* Button warna yang lebih menarik dan sesuai dengan tema */
+.sec-produk .card-body .btn {
+    font-size: 0.9rem;
+    padding: 8px 12px;
+    margin-top: 10px;
+    background: linear-gradient(135deg, #c471ed, #f64f59);
+    border: none;
+    color: white;
+    border-radius: 4px;
+    transition: all 0.3s;
+}
+
+.sec-produk .card-body .btn:hover {
+    background: linear-gradient(135deg, #f64f59, #c471ed);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(198, 113, 237, 0.4);
+}
+
+.sec-about{
+    display: block;
+    align-items: center;
+    padding: 2rem 7%;
+    background-color: white;
+    color: #6a11cb;
+}
+
+.sec-about h1{
+    text-align: center;
+    font-weight: bold;
+    font-size: 35px;
+}
+
+.sec-about p{
+    text-align: center;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.sec-kontak{
+    display: block;
+    align-items: center;
+    padding: 2rem 7%;
+    background: linear-gradient(135deg, #7303c0, #ec38bc), url('/api/placeholder/1600/600') center/cover no-repeat;
+    color: white;
+}
+
+.sec-kontak h1{
+    text-align: center;
+    font-weight: bold;
+    font-size: 35px;
+}
+
+.sec-kontak p{
+    text-align: center;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+footer{
+    background: linear-gradient(135deg, #4a00e0, #8e2de2), url('/api/placeholder/1600/600') center/cover no-repeat;
+    color: white;
+    border-top: 1px solid white;
+    padding: 20px 7%;
+    text-align: center;
+}
+
+/* Adding specific styles for map elements */
+.map-container {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+/* Pond area styling dengan warna yang lebih menarik */
+.map-pond-area {
+    fill: #c471ed;
+    stroke: #8e2de2;
+    stroke-width: 1px;
+    opacity: 0.85;
+}
+
+/* Green areas on map with new color scheme */
+.map-vegetation {
+    fill: #3c1053;
+    opacity: 0.75;
+}
+
+/* RESPONSIVE */
+/* LAPTOP */
+@media (max-width: 1336px) {
+    html{
+        font-size: 95%;
+    }
+
+    .sec-produk .col-md-3 {
+        flex: 1 1 45%; /* 2 kolom */
+        max-width: 45%;
+    }
+}
+
+/* TABLET */
+@media (max-width: 768px) {
+    html{
+        font-size: 75%;
+    }
+
+    #btn-menu{
+        display: inline-block;
+    }
+    .navbar .navbar-menu{
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        background: linear-gradient(135deg, #4a00e0, #8e2de2), url('/api/placeholder/1600/600') center/cover no-repeat;
+        width: 20rem;   
+        height: 100vh;
+        transition: 0.3s;
+    }
+    .navbar .navbar-menu.active{
+        right: 0;
+    }
+    .navbar .navbar-menu a{
+        color: white;
+        display: block;
+        margin: 1.5rem;
+        padding: 0.5rem;
+        font-size: 1.5rem;
+    }
+
+    .navbar .navbar-menu a:hover{
+        background-color: white;
+        color: #6a11cb;
+        display: block;
+        margin: 1.5rem;
+        padding: 0.5rem;
+        font-size: 1.5rem;
+    }
+
+    /* section */
+    .image-wrapper .content-beranda h1 {
+        font-size: 2rem;
+    }
+
+    .image-wrapper .content-beranda p {
+        font-size: 1rem;
+    }
+
+    .image-wrapper .content-beranda .btn {
+        font-size: 1rem;
+        padding: 0.6rem 1.2rem;
+    }
+
+    .sec-produk .col-md-3 {
+        flex: 1 1 100%; /* FULL lebar */
+        max-width: 100%;
+    }
+}
+
+/* HP */
+@media (max-width: 450px) {
+    html{
+        font-size: 65%;
+    }
+    #btn-menu{
+        display: inline-block;
+    }
+
+    .sec-produk .col-md-3 {
+        flex: 1 1 100%; /* FULL lebar */
+        max-width: 100%;
+    }
+}

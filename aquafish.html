@@ -1,0 +1,121 @@
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WebGIS AquaFish</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+  <script src="https://unpkg.com/shpjs@latest/dist/shp.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- Loading overlay -->
+  <div id="loading">
+    <div class="loading-container">
+      <img src="Logo.png" alt="Loading..." />
+      <p>Memuat data tambak...</p>
+      <div class="loading-bar">
+        <div class="loading-progress"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <div class="hero">
+    <div class="hero-content">
+      <img src="Logo.png" alt="Logo AquaFish" class="hero-logo">
+      <h1>AQUAFISH : WEBGIS Analisis Kualitas Air Tambak</h1>
+      <p>Platform analisis dan pemantauan kualitas air untuk budidaya perikanan berkelanjutan</p>
+    </div>
+  </div>
+  <div class="wave-container">
+    <div class="wave"></div>
+  </div>
+
+  <div class="main-content">
+    <div class="app-container">
+      <!-- Sidebar -->
+      <div id="sidebar">
+        <div style="display: flex;">
+          <a href="index.php" type="button" style="text-decoration: none; background-color:deepskyblue; padding:10px; border-radius:20px; color:white; font-weight:bold;">kembali</a>
+          <div class="theme-toggle" style="margin-top:20px;">
+            <span id="theme-text">Mode Gelap</span>
+            <label class="theme-toggle-switch">
+              <input type="checkbox" id="darkToggle">
+              <span class="switch-slider"></span>
+            </label>
+          </div>
+        </div>
+        <div class="sidebar-header" style="margin: 20px;">
+          <h2 class="sidebar-title"><i class="fas fa-water"></i> Analisis Kualitas Air</h2>
+        </div>
+
+        <div class="filter-container">
+          <label class="filter-label" for="statusFilter"><i class="fas fa-filter"></i> Filter Kualitas Air:</label>
+          <select id="statusFilter" class="filter-quality">
+            <option value="all" class="filter-option">Semua Kualitas Air</option>
+            <option value="Baik (Memenuhi)" class="filter-option">Baik (Memenuhi)</option>
+            <option value="Cemar Ringan" class="filter-option">Cemar Ringan</option>
+          </select>
+        </div>
+
+        <!-- Quality indicators -->
+        <div class="stats-title"><i class="fas fa-chart-pie"></i> Statistik Kualitas</div>
+        <div class="quality-stats" id="quality-stats">
+          <div class="quality-indicator">
+            <div class="quality-status">
+              <div class="quality-dot good"></div>
+              <span class="quality-label">Baik (Memenuhi)</span>
+            </div>
+            <span class="quality-count" id="count-good">0</span>
+          </div>
+
+          <div class="quality-indicator">
+            <div class="quality-status">
+              <div class="quality-dot medium"></div>
+              <span class="quality-label">Cemar Ringan</span>
+            </div>
+            <span class="quality-count" id="count-medium">0</span>
+          </div>
+
+          <div class="quality-indicator">
+            <div class="quality-status">
+              <div class="quality-dot unknown"></div>
+              <span class="quality-label">Tidak Diketahui</span>
+            </div>
+            <span class="quality-count" id="count-unknown">0</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Map -->
+      <div id="map-container">
+        <div class="search-container">
+          <div class="search-box">
+            <input type="text" id="searchBox" placeholder="Cari lokasi...">
+            <button id="searchButton"><i class="fas fa-search"></i></button>
+          </div>
+        </div>
+        <div id="map"></div>
+      </div>
+
+
+
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+      <div class="footer-content">
+        <p>&copy; 2025 AquaFish WebGIS | Solusi Cerdas untuk Pemantauan Kualitas Air Tambak</p>
+        <p>Menghubungkan teknologi GIS dengan budidaya perikanan untuk hasil terbaik</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
